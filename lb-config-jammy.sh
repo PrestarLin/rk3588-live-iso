@@ -12,7 +12,7 @@ LB_IMAGE_NAME="ubuntu-jammy-live" lb config \
 	--bootloaders grub-efi \
 	--keyring-packages "ubuntu-keyring initramfs-tools" \
 	--linux-packages "linux-image linux-dtb" \
-	--linux-flavours "legacy-rk35xx" \
+	--linux-flavours "vendor-rk35xx" \
 	--parent-mirror-bootstrap "http://ports.ubuntu.com" \
 	--parent-mirror-chroot "http://ports.ubuntu.com" \
 	--parent-mirror-chroot-security "http://ports.ubuntu.com" \
