@@ -1,8 +1,8 @@
-name: Build
+name: Build-current
 on:
   push:
     branches:
-      - main
+      - current-kernel
 
 jobs:
   prepare_release:
@@ -30,8 +30,8 @@ jobs:
     needs: prepare_release
     strategy:
       matrix:
-        # CODENAME: [bookworm, jammy]
-        CODENAME: [bookworm]
+        CODENAME: [bookworm, jammy]
+        #CODENAME: [bookworm]
     steps:
       - name: Get more space
         uses: easimon/maximize-build-space@master
