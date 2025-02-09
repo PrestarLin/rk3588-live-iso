@@ -1,4 +1,4 @@
-LB_IMAGE_NAME="debian-bookworm-k6.1.x-live" lb config \
+LB_IMAGE_NAME="debian-bookworm-k6.1.x-cinnamon-live" lb config \
 	--architecture arm64 \
 	--archive-areas 'contrib main non-free non-free-firmware' \
 	--parent-archive-areas 'contrib main non-free non-free-firmware' \
@@ -39,8 +39,8 @@ cp obs-amazingfate.gpg config/archives/obs-amazingfate.key.chroot
 
 wget https://raw.githubusercontent.com/armbian/build/main/config/cli/common/main/packages -O config/package-lists/armbian-cli.list.chroot
 wget https://raw.githubusercontent.com/armbian/build/main/config/cli/common/main/packages.additional -O config/package-lists/armbian-cli-addtional.list.chroot
-wget https://raw.githubusercontent.com/armbian/build/main/config/desktop/bookworm/environments/gnome/config_base/packages -O config/package-lists/armbian-gnome.list.chroot
-sed -i "/lightdm/d" config/package-lists/armbian-gnome.list.chroot
+wget https://raw.githubusercontent.com/armbian/build/main/config/desktop/bookworm/environments/cinnamon/config_base/packages -O config/package-lists/armbian-cinnamon.list.chroot
+sed -i "/lightdm/d" config/package-lists/cinnamon-gnome.list.chroot
 cp additional-packages config/package-lists/additional-packages.list.chroot
 
 mkdir -p config/includes.chroot_after_packages/etc/netplan
