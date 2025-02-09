@@ -7,6 +7,9 @@ LB_IMAGE_NAME="debian-bookworm-k6.1.x-live" lb config \
 	--distribution-chroot bookworm \
 	--distribution-binary bookworm\
 	--bootloaders grub-efi \
+        --debian-installer live \
+        --debian-installer-gui true \
+	
 	--keyring-packages "debian-archive-keyring ca-certificates fontconfig-config initramfs-tools" \
 	--linux-packages "linux-image linux-dtb" \
 	--linux-flavours "vendor-rk35xx" \
