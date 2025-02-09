@@ -1,10 +1,11 @@
 firmware-misc-nonfree
 mesa-utils
 vim
+gnome
 calamares
 calamares-settings-debian
 grub-efi-arm64
 gparted
 live-task-localisation
 live-task-recommended
-armbian-config
+
