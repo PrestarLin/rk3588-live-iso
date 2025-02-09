@@ -54,7 +54,7 @@ jobs:
       
       - name: Remove conflicting packages
         run: |
-          sudo apt remove firmware-brcm80211 firmware-ralink firmware-samsung firmware-realtek
+          sudo apt remove firmware-brcm80211 firmware-ralink firmware-samsung firmware-realtek -y
           sudo apt autoremove
           sudo apt autoclean
           
