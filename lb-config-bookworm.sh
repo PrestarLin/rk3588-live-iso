@@ -18,7 +18,7 @@ LB_IMAGE_NAME="debian-bookworm-k6.1.x-live" lb config \
 	--parent-mirror-binary-security "http://security.debian.org/debian-security/" \
 	--parent-mirror-debian-installer "http://ftp.debian.org/debian/" \
 	--mirror-bootstrap "http://ftp.debian.org/debian/" \
-	--mirror-chroot "http://mirrors.cernet.edu.cn/" \
+	--mirror-chroot "http://mirrors.cernet.edu.cn/debian/" \
 	--mirror-chroot-security "http://mirrors.cernet.edu.cn/debian-security/" \
 	--mirror-binary "http://ftp.debian.org/debian/" \
 	--mirror-binary-security "http://security.debian.org/debian-security/" \
