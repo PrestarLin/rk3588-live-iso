@@ -51,6 +51,13 @@ jobs:
           patch -p1 < ../../grub-dtb.patch
           dpkg-buildpackage -us -uc
           sudo apt -y install ../live-build_*_all.deb
+      
+      - name: Remove conflicting packages
+        run: |
+          sudo apt remove firmware-brcm80211 firmware-ralink firmware-samsung firmware-realtek
+          sudo apt autoremove
+          sudo apt autoclean
+          
       - name: Build live iso
         shell: bash
         run: |
