@@ -1,6 +1,5 @@
 LB_IMAGE_NAME="debian-bookworm-k6.1.x-live" lb config \
 	--architecture arm64 \
-        --desktop gnome \
 	--archive-areas 'contrib main non-free non-free-firmware' \
 	--parent-archive-areas 'contrib main non-free non-free-firmware' \
 	--debian-installer-distribution bookworm \
