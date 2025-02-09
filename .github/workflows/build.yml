@@ -1,4 +1,4 @@
-name: Build
+name: Build-vendor-cinnamon-bookworm
 on:
   push:
     branches:
@@ -63,7 +63,7 @@ jobs:
           cp ../10_linux .
           chmod +x lb-config.sh
           ./lb-config.sh
-          sudo apt -y install qemu-user-static debian-archive-keyring
+          sudo apt -y install qemu-user-static debian-archive-keyring ca-certificates
           sudo lb build
       - name: Upload iso
         uses: xresloader/upload-to-github-release@v1
