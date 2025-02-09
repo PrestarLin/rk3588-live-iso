@@ -1,24 +1,24 @@
-# name: Build-vendor
-# on:
-#   push:
-#     branches:
-#       - main
-      
-# name: Manual Trigger
-
+name: Build-vendor
 on:
-  # 手动触发事件
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
-      push:
-        branches:
-          - main
+  push:
+    branches:
+      - main
+      
+name: Manual Trigger
+
+# on:
+#   # 手动触发事件
+#   workflow_dispatch:
+#     inputs:
+#       logLevel:
+#         description: 'Log level'
+#         required: true
+#         default: 'warning'
+#       tags:
+#         description: 'Test scenario tags'
+#       push:
+#         branches:
+#           - main
 jobs:
   prepare_release:
     runs-on: ubuntu-latest
@@ -44,9 +44,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare_release
     strategy:
+      fail-fast: true
       matrix:
-        # CODENAME: [bookworm, jammy]
-        CODENAME: [bookworm]
+        CODENAME: [bookworm, jammy]
+        # CODENAME: [bookworm]
     steps:
       - name: Get more space
         uses: easimon/maximize-build-space@master
