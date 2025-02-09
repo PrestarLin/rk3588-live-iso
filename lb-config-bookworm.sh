@@ -12,7 +12,7 @@ LB_IMAGE_NAME="debian-bookworm-k6.1.x-live" lb config \
 	--linux-packages "linux-image linux-dtb" \
 	--linux-flavours "vendor-rk35xx" \
 	--parent-mirror-bootstrap "http://ftp.debian.org/debian/" \
-	--parent-mirror-chroot "http://mirrors.cernet.edu.cn/" \
+	--parent-mirror-chroot "http://mirrors.cernet.edu.cn/debian" \
 	--parent-mirror-chroot-security "http://mirrors.cernet.edu.cn/debian-security/" \
 	--parent-mirror-binary "http://ftp.debian.org/debian/" \
 	--parent-mirror-binary-security "http://security.debian.org/debian-security/" \
