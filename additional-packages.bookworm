@@ -1,6 +1,5 @@
 firmware-misc-nonfree
-ssh
-ca-certificates
+armbian-firmware-full
 mesa-utils
 vim
 calamares
