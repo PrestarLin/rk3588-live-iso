@@ -9,7 +9,7 @@ LB_IMAGE_NAME="debian-bookworm-live" lb config \
 	--bootloaders grub-efi \
 	--keyring-packages "debian-archive-keyring ca-certificates fontconfig-config initramfs-tools" \
 	--linux-packages "linux-image linux-dtb" \
-	--linux-flavours "legacy-rk35xx" \
+	--linux-flavours "vendor-rk35xx" \
 	--parent-mirror-bootstrap "http://ftp.debian.org/debian/" \
 	--parent-mirror-chroot "http://ftp.debian.org/debian/" \
 	--parent-mirror-chroot-security "http://security.debian.org/debian-security/" \
