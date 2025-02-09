@@ -6,19 +6,19 @@ on:
       
 name: Manual Trigger
 
-# on:
-#   # 手动触发事件
-#   workflow_dispatch:
-#     inputs:
-#       logLevel:
-#         description: 'Log level'
-#         required: true
-#         default: 'warning'
-#       tags:
-#         description: 'Test scenario tags'
-#       push:
-#         branches:
-#           - main
+on:
+  # 手动触发事件
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
+      push:
+        branches:
+          - main
 jobs:
   prepare_release:
     runs-on: ubuntu-latest
