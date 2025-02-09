@@ -31,6 +31,7 @@ jobs:
     strategy:
       matrix:
         CODENAME: [bookworm, jammy]
+        experimental: [false]
         #CODENAME: [bookworm]
     steps:
       - name: Get more space
@@ -73,7 +74,7 @@ jobs:
           cp ../customize-chroot-${{ matrix.CODENAME }}.hook.chroot customize-chroot.hook.chroot
           cp ../10_linux .
           chmod +x lb-config.sh
-          ./lb-config.sh
+          sudo ./lb-config.sh
           sudo apt -y install qemu-user-static debian-archive-keyring
           sudo lb build
       - name: Upload iso
