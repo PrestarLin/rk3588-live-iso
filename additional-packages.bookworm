@@ -1,6 +1,9 @@
 firmware-misc-nonfree
+ssh
+gnome
 mesa-utils
 vim
+calamares
 calamares-settings-debian
 grub-efi-arm64
 gparted
