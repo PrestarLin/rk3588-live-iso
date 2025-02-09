@@ -11,14 +11,14 @@ LB_IMAGE_NAME="debian-bookworm-k6.1.x-live" lb config \
 	--linux-packages "linux-image linux-dtb" \
 	--linux-flavours "vendor-rk35xx" \
 	--parent-mirror-bootstrap "http://ftp.debian.org/debian/" \
-	--parent-mirror-chroot "http://mirrors.cernet.edu.cn/debian" \
-	--parent-mirror-chroot-security "http://mirrors.cernet.edu.cn/debian-security/" \
+	--parent-mirror-chroot "http://ftp.debian.org/debian/" \
+	--parent-mirror-chroot-security "http://ftp.debian.org/debian/debian-security/" \
 	--parent-mirror-binary "http://ftp.debian.org/debian/" \
 	--parent-mirror-binary-security "http://security.debian.org/debian-security/" \
 	--parent-mirror-debian-installer "http://ftp.debian.org/debian/" \
 	--mirror-bootstrap "http://ftp.debian.org/debian/" \
-	--mirror-chroot "http://mirrors.cernet.edu.cn/debian/" \
-	--mirror-chroot-security "http://mirrors.cernet.edu.cn/debian-security/" \
+	--mirror-chroot "hhttp://ftp.debian.org/debian/" \
+	--mirror-chroot-security "http://security.debian.org/debian-security/" \
 	--mirror-binary "http://ftp.debian.org/debian/" \
 	--mirror-binary-security "http://security.debian.org/debian-security/" \
 	--mirror-debian-installer "http://ftp.debian.org/debian/"
@@ -40,7 +40,7 @@ cp obs-amazingfate.gpg config/archives/obs-amazingfate.key.chroot
 wget https://raw.githubusercontent.com/armbian/build/main/config/cli/common/main/packages -O config/package-lists/armbian-cli.list.chroot
 wget https://raw.githubusercontent.com/armbian/build/main/config/cli/common/main/packages.additional -O config/package-lists/armbian-cli-addtional.list.chroot
 wget https://raw.githubusercontent.com/armbian/build/main/config/desktop/bookworm/environments/gnome/config_base/packages -O config/package-lists/armbian-gnome.list.chroot
-
+sed -i "/lightdm/d" config/package-lists/armbian-gnome.list.chroot
 cp additional-packages config/package-lists/additional-packages.list.chroot
 
 mkdir -p config/includes.chroot_after_packages/etc/netplan
