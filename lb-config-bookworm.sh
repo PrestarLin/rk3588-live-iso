@@ -11,14 +11,14 @@ LB_IMAGE_NAME="debian-bookworm-live" lb config \
 	--linux-packages "linux-image linux-dtb" \
 	--linux-flavours "vendor-rk35xx" \
 	--parent-mirror-bootstrap "http://ftp.debian.org/debian/" \
-	--parent-mirror-chroot "http://ftp.debian.org/debian/" \
-	--parent-mirror-chroot-security "http://security.debian.org/debian-security/" \
+	--parent-mirror-chroot "http://mirrors.cernet.edu.cn/" \
+	--parent-mirror-chroot-security "http://mirrors.cernet.edu.cn/debian-security/" \
 	--parent-mirror-binary "http://ftp.debian.org/debian/" \
 	--parent-mirror-binary-security "http://security.debian.org/debian-security/" \
 	--parent-mirror-debian-installer "http://ftp.debian.org/debian/" \
 	--mirror-bootstrap "http://ftp.debian.org/debian/" \
-	--mirror-chroot "http://ftp.debian.org/debian/" \
-	--mirror-chroot-security "http://security.debian.org/debian-security/" \
+	--mirror-chroot "http://mirrors.cernet.edu.cn/" \
+	--mirror-chroot-security "http://mirrors.cernet.edu.cn/debian-security/" \
 	--mirror-binary "http://ftp.debian.org/debian/" \
 	--mirror-binary-security "http://security.debian.org/debian-security/" \
 	--mirror-debian-installer "http://ftp.debian.org/debian/"
