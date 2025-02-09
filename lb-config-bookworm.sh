@@ -1,4 +1,4 @@
-LB_IMAGE_NAME="debian-bookworm-live" lb config \
+LB_IMAGE_NAME="debian-bookworm-k6.1.x-live" lb config \
 	--architecture arm64 \
 	--archive-areas 'contrib main non-free non-free-firmware' \
 	--parent-archive-areas 'contrib main non-free non-free-firmware' \
