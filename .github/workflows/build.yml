@@ -2,7 +2,7 @@ name: Build
 on:
   push:
     branches:
-      -  vendor
+      -  vendor-cinnamon-bookworm
 
 jobs:
   prepare_release:
