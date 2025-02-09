@@ -1,4 +1,5 @@
-firmware-misc-nonfree
+armbian-config
+armbian-firmware-full
 mesa-utils
 vim
 calamares
