@@ -29,9 +29,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare_release
     strategy:
+      fail-fast: false
       matrix:
         CODENAME: [bookworm, jammy]
-        experimental: [false]
+        # experimental: [false]
         #CODENAME: [bookworm]
     steps:
       - name: Get more space
